@@ -27,4 +27,3 @@ mensaje_1="Mi nombre es: "
 mensaje_2="Laura"
 mensaje_completo= mensaje_1 + mensaje_2
 print(mensaje_completo)
-
