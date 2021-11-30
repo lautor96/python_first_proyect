@@ -8,14 +8,12 @@ def message_a_menu():
     print("3. Multiplicacion")
     print("4. Division\n")
 
-
 def request_user_option():
     print("Ingrese una opcion del menu")
     return int(input())
 
 def numbers_operation():
     print ("\nAhora por favor ingrese los numeros que quiere operar entre si\n")
-
 
 def add_numbers(n_first, n_second):
     print ("\nAccedio a: SUMA\n")
@@ -33,15 +31,12 @@ def div_numbers(n_first, n_second):
     print ("\nAccedio a: DIVISION\n")
     print("El resultado de la DIVISION es " + str(n_first / n_second))
 
-
 message_a_menu()
 option = request_user_option()
 numbers_operation()
 
 number_1= float(input("Ingrese el primer numero"))
 number_2= float(input("Ingrese el segundo numero"))
-
-
 
 if (option == 1):
     add_numbers(number_1, number_2)
