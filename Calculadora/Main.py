@@ -1,34 +1,62 @@
-print ("BIENVENIDO A CALCULATOR\nAplicacion desarrollada para la resolucion de "
-       "operaciones entre dos numeros, como: Suma, resta, multiplicacion y division.\n"
-       "Para hacer uso de la calculadora, por favor escoja una opcion del siguiente MENU")
+def message_a_menu():
+    print("BIENVENIDO A CALCULATOR\n")
+    print("Aplicacion desarrollada para la resolucion de operaciones entre dos numeros, como: Suma, resta, multiplicacion y division")
+    print("Para hacer uso de la calculadora, por favor escoja una opcion del siguiente MENU\n")
+    print("MENU")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicacion")
+    print("4. Division\n")
 
 
-opcion=int(input("MENU\n "
-                 "1. Suma [1]\n"
-                 "2. Resta [2]\n"
-                 "3. Multiplicacion [3]\n"
-                 "4. Division [4]\n"))
+def request_user_option():
+    print("Ingrese una opcion del menu")
+    return int(input())
 
-print ("\nAhora por favor ingrese los numeros que quiere operar entre si\n")
-numero_1= float(input("Ingrese el primer numero"))
-numero_2= float(input("Ingrese el segundo numero"))
+def numbers_operation():
+    print ("\nAhora por favor ingrese los numeros que quiere operar entre si\n")
 
-if (opcion == 1):
-    print ("\nAccedio a: SUMA")
-    suma=float(numero_1+numero_2)
-    print ("El resultado de la SUMA, es:% .2f"% suma)
-elif (opcion == 2):
-    print ("\nAccedio a: RESTA")
-    resta = float(numero_1 - numero_2)
-    print ("El resultado de la RESTA, es:% .2f" % resta)
-elif (opcion == 3):
-    print ("\nAccedio a: MULTIPLICACION")
-    multiplicacion = float(numero_1 * numero_2)
-    print ("El resultado de la MULTIPLICACION, es:% .2f" % multiplicacion)
-elif (opcion == 4):
+
+def add_numbers(n_first, n_second):
+    print ("\nAccedio a: SUMA\n")
+    print("El resultado de la SUMA es " + str(n_first + n_second))
+
+def sub_numbers(n_first, n_second):
+    print ("\nAccedio a: RESTA\n")
+    print("El resultado de la RESTA es " + str(n_first - n_second))
+
+def product_numbers(n_first, n_second):
+    print ("\nAccedio a: MULTIPLICAION\n")
+    print("El resultado de la MULTIPLICACION es " + str(n_first * n_second))
+
+def div_numbers(n_first, n_second):
+    print ("\nAccedio a: DIVISION\n")
+    print("El resultado de la DIVISION es " + str(n_first / n_second))
+
+
+message_a_menu()
+option = request_user_option()
+numbers_operation()
+
+number_1= float(input("Ingrese el primer numero"))
+number_2= float(input("Ingrese el segundo numero"))
+
+
+
+if (option == 1):
+    add_numbers(number_1, number_2)
+elif (option == 2):
+    sub_numbers(number_1, number_2)
+elif (option == 3):
+    product_numbers(number_1, number_2)
+elif (option == 4):
     print ("\nAccedio a: DIVISION")
-    division = float(numero_1 / numero_2)
-    print ("El resultado de la DIVISION, es:% .2f" % division)
+    if (number_1 == 0):
+        print("ERROR, el resultado es indefinido" )
+    elif (number_2 == 0):
+        print("ERROR, el resultado es indefinido" )
+    else:
+        div_numbers(number_1, number_2)
 else:
     print ("\nERROR en la opcion del MENU\nFIN")
 
