@@ -1,3 +1,7 @@
+#Aplicacion login - ELECTIVA EN PROGRAMACION
+#Laura Alejandra Torres Ochoa
+#Codigo:201421760
+
 def compare_users(n_users, m_users):
     if len(n_users) is 0:
         print ("\nUsuario no debe estar vacio\n")
