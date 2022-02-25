@@ -1,7 +1,7 @@
 print("BIENVENIDO A CALCULATOR\n")
 print("Aplicacion desarrollada para la resolucion de operaciones entre dos numeros, como: Suma, resta, multiplicacion "
       "y division")
-print("Para hacer uso de la calculadora, por favor escoja una opcion del siguiente MENU\n")
+print("Para hacer uso de la calculadora, por favor escoja una opcion del MENU\n")
 
 
 def message_a_menu():
